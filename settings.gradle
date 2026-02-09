@@ -1,0 +1,4 @@
+rootProject.name = 'AdFlix'
+include 'domain'
+include 'application'
+include 'infrastructure'
