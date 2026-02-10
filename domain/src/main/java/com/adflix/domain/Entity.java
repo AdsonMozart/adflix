@@ -16,9 +16,10 @@ public abstract class Entity<ID extends Identifier> {
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(final Object o) {
+        if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Entity<?> entity = (Entity<?>) o;
+        final Entity<?> entity = (Entity<?>) o;
         return Objects.equals(getId(), entity.getId());
     }
 

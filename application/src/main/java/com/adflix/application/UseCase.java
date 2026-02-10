@@ -1,9 +1,15 @@
 package com.adflix.application;
 
 
-public class UseCase {
+import com.adflix.domain.Identifier;
+import com.adflix.domain.category.Category;
+import com.adflix.domain.category.CategoryID;
 
-    public Category execute(){
-        return new Category();
+import java.time.Instant;
+
+public class UseCase extends Identifier {
+
+    public Category execute() {
+        return Category.newCategory("It: A Coisa", "Filme de Terror", true);
     };
 }
