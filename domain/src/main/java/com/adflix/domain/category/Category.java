@@ -1,6 +1,7 @@
 package com.adflix.domain.category;
 
 import com.adflix.domain.AggregateRoot;
+import com.adflix.domain.validation.ValidationHandler;
 
 import java.time.Instant;
 import java.util.UUID;
@@ -41,6 +42,11 @@ public class Category extends AggregateRoot<CategoryID> {
         return new Category(id, aName, aDescription, isActive, now, now, null);
     }
 
+
+    @Override
+    public void validate(final ValidationHandler handler) {
+        new CategoryValidator(this, handler).validate();
+    }
 
     // getters and setters
     public CategoryID getId() {

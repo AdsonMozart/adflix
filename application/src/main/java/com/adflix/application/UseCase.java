@@ -7,7 +7,7 @@ import com.adflix.domain.category.CategoryID;
 
 import java.time.Instant;
 
-public class UseCase extends Identifier {
+public class UseCase {
 
     public Category execute() {
         return Category.newCategory("It: A Coisa", "Filme de Terror", true);
